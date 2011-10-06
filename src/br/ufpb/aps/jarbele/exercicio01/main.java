@@ -25,13 +25,13 @@ public class main {
 					Campo c = new Campo();
 					
 					//esse bloco é responsável pela verificação do texto
-					
+					try{ 
 						 System.out.print("Nome:");
 						 String nome = telaDeOpcao.nextLine();
-						try{ 
 						 c.verificarCampo(nome, new ValidadorCampoNome());
+						 
 						 System.out.println("Opa! Deu certo.");
-						 System.exit(0);
+						 
 					} catch(TextoInvalidoException ex){
 						System.out.println(ex.getMessage());
 					}

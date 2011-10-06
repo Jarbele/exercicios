@@ -17,9 +17,15 @@ public class ValidadorCampoNome implements ValidadorCampo{
 	
 	public void verificarCampo (String txt) throws TextoInvalidoException{
 		
-		for ()
+		for (int i = 0; i < txt.length(); i++){
+			if (Character.isDigit(txt.charAt(i))){
+				throw new TextoInvalidoException("");
+			}
+				
+		}
+	}	
 		
-		
+}
 			/*try{
 			if (txt.length() >= tamanhoMax){
 				throw new TextoInvalidoException ("ERRO: Nome deve ter no máximo 30 caracteres");
@@ -32,6 +38,3 @@ public class ValidadorCampoNome implements ValidadorCampo{
 			System.out.print(ex.getMessage());
 		}
 	}*/
-
-	}
-}
