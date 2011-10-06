@@ -2,28 +2,42 @@ package br.ufpb.aps.jarbele.exercicio01;
 
 public class Campo {
 	
-	private String campoTexto;
-	private String campoEmail;
-	private int campoNumerico;
-	private ValidadorCampo validador;
+	private String nome;
+	private String email;
+	private int idade;
 	
-	public Campo (String ct, String ce, int cn, ValidadorCampo validador){
-		this.campoTexto = ct;
-		this.campoEmail = ce;
-		this.campoNumerico = cn; 
-		this.validador = validador;
-		
+	
+	public Campo (){
 	}
 	
-	public void setValidador (ValidadorCampo vc){
-		this.validador = vc;
+	public String getLabel (){
+		return nome;
+	}
+	
+	public void setLabel (String label){
+		this.nome = label;
 	}
 
-	public boolean verificarCampo (String txt) throws TextoInvalidoException { //txt: texto que o usuário digitar no campo
+	public String getEmail(){
+		return email;
+	}
+	
+	public void setEmail(String email){
+		this.email = email;
+	}
 
-		
+	public int getIdade(){
+		return idade;
+	}
+	
+	public void setIdade(int id){
+		this.idade = id;
 	}
 	
 	
 	
+	public void verificarCampo (String txt, ValidadorCampo vc) throws TextoInvalidoException { // verificar se esse void dá algum problema, se der, colcoar boolean
+		vc.verificarCampo(txt);
+	}
+		
 }

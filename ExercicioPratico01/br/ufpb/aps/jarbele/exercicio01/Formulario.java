@@ -13,7 +13,7 @@ public class Formulario {
 		this.descricao = nome;
 		this.campos = new LinkedList<Campo> ();
 	}
-		
+	
 	public void addCampo (Campo c){
 		campos.add(c);
 	}
@@ -21,6 +21,21 @@ public class Formulario {
 	public void removeCampo (Campo c){
 		campos.remove(c);
 	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 	
-		
+	public void listarItensCadastrados(){
+
+		for (Campo campo: campos){
+			System.out.println(campo);
+		}
+			
+	}
+	
 }
